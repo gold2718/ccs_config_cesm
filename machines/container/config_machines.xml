@@ -1,6 +1,7 @@
   <machine MACH="container">
     <DESC>
-      Containerized development environment (Docker/Singularity) for CESM w/ GNU compilers
+    Containerized development environment (Docker/Singularity) for
+    NorESM w/ GNU compilers
     </DESC>
     <OS>LINUX</OS>
     <COMPILERS>gnu</COMPILERS>
@@ -25,8 +26,10 @@
     <module_system type="none">
     </module_system>
     <environment_variables>
-      <env name="NETCDF_PATH">/usr/local</env>
-      <env name="PNETCDF_PATH">/usr/local</env>
+      <env name="ESMFMKFILE">$ENV{EBROOTESMF}/lib/esmf.mk</env>
+      <env name="ESMF_RUNTIME_PROFILE">ON</env>
+      <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
+      <env name="NETCDF_DIR">/opt/netcdf</env>
       <env name="FPATH">/usr/lib64</env>
       <env name="CPATH">/usr/lib64</env>
     </environment_variables>
@@ -34,4 +37,3 @@
       <resource name="RLIMIT_STACK">-1</resource>
     </resource_limits>
   </machine>
-
