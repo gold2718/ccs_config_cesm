@@ -89,7 +89,7 @@
     </gridmap>
 
     <!-- JRA025 river grid -->
-    <!-- ROF2OCN mapping file missing for rof_grid="JRA025" and ocn_grid="tnx2v1","tnx0.25v4" and "tnx0.125v4" -->
+    <!-- ROF2OCN mapping file missing for rof_grid="JRA025" and ocn_grid="tnx0.25v4";"tnx0.125v4" -->
 
     <gridmap rof_grid="JRA025" ocn_grid="tx0.1v2" >
       <map name="ROF2OCN_LIQ_RMAPNAME">cpl/gridmaps/rJRA025/map_JRA025m_to_tx0.1v2_e333r100_170619.nc</map>
@@ -118,6 +118,10 @@
     <gridmap rof_grid="JRA025" ocn_grid="tnx0.5v1" >
       <map name="ROF2OCN_LIQ_RMAPNAME">cpl/cpl6/map_JRA025_to_tnx0.5v1_e300r100_20240702.nc</map>
       <map name="ROF2OCN_ICE_RMAPNAME">cpl/cpl6/map_JRA025_to_tnx0.5v1_e300r100_20240702.nc</map>
+    </gridmap>
+    <gridmap rof_grid="JRA025" ocn_grid="tnx2v1" >
+      <map name="ROF2OCN_LIQ_RMAPNAME">cpl/cpl6/map_JRA025_to_tnx2v1_e1000r300_20250814.nc</map>
+      <map name="ROF2OCN_ICE_RMAPNAME">cpl/cpl6/map_JRA025_to_tnx2v1_e1000r300_20250814.nc</map>
     </gridmap>
 
 
