@@ -9,4 +9,13 @@ set(NetCDF_Fortran_PATH "$ENV{NETCDF_FORTRAN_ROOT}")
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 set(LDFLAGS "")
-string(APPEND SLIBS " -lnetcdf -lnetcdff -llapack -lblas")
+string(APPEND SLIBS " -lnetcdf -lnetcdff")
+
+# BLAS/LAPACK come from the spack-installed netlib-lapack. Loading the
+# netlib-lapack (see MODULES_DEFAULT in the container) sets
+# NETLIB_LAPACK_ROOT. Tools/Makefile appends "-L$(LAPACK_LIBDIR) -llapack
+# -lblas to SLIBS whenever LAPACK_LIBDIR is defined.
+if (NOT DEFINED ENV{NETLIB_LAPACK_ROOT})
+  message(FATAL_ERROR "NETLIB_LAPACK_ROOT is not set; is the netlib-lapack module loaded?")
+endif()
+set(LAPACK_LIBDIR "$ENV{NETLIB_LAPACK_ROOT}/lib)")
