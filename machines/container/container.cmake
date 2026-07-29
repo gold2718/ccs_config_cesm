@@ -9,4 +9,4 @@ set(NetCDF_Fortran_PATH "$ENV{NETCDF_FORTRAN_ROOT}")
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 set(LDFLAGS "")
-string(APPEND SLIBS " $ENV{NETCDF_FORTRAN_PATH} -lnetcdf $ENV{NETCDF_C_PATH} -lnetcdff")
+string(APPEND SLIBS " -L$ENV{NETCDF_FORTRAN_PATH}/lib -lnetcdff -L$ENV{NETCDF_C_PATH}/lib -lnetcdf")
