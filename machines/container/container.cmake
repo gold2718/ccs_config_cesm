@@ -7,7 +7,6 @@ set(NetCDF_Fortran_PATH "$ENV{NETCDF_FORTRAN_ROOT}")
 
 # Add our cmake finder scripts
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
-list(APPEND NetCDF_C_LIBRARIES /opt/netcdf/include)
 
 set(LDFLAGS "")
 string(APPEND SLIBS " -lnetcdf -lnetcdff -llapack -lblas")
