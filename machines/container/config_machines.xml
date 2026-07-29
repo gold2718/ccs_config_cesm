@@ -31,6 +31,7 @@
       <env name="ESMF_RUNTIME_PROFILE_OUTPUT">SUMMARY</env>
       <env name="NETCDF_C_PATH">$ENV{NETCDF_C_ROOT}</env>
       <env name="NETCDF_FORTRAN_PATH">$ENV{NETCDF_FORTRAN_ROOT}</env>
+      <env name="PIO_TYPENAME_VALID_VALUES">netcdf,pnetcdf,netcdf4p,netcdf4c</env>
       <env name="PNETCDF_PATH">$ENV{PARALLEL_NETCDF_ROOT}</env>
     </environment_variables>
     <resource_limits>
